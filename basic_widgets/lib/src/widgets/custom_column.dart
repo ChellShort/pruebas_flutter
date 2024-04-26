@@ -11,6 +11,7 @@ class CustomColumn extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: sized_box_for_whitespace
     return Container(
+      height: 450.0,
       width: double.infinity,
       child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

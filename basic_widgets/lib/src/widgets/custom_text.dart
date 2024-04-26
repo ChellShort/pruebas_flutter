@@ -1,28 +1,11 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const Customtext());
-}
-
-class Customtext extends StatelessWidget {
-  const Customtext({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class HomePage extends StatelessWidget{
-  const HomePage({super.key});
+class CustomText extends StatelessWidget{
+  const CustomText({super.key});
   
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Text(
+    return const Text(
         'Aprendamos con proyectos', 
         style: TextStyle(
           color: Colors.blue,
@@ -35,7 +18,6 @@ class HomePage extends StatelessWidget{
         textAlign: TextAlign.center,
         // ignore: deprecated_member_use
         textScaleFactor: 2.5,
-      ),
-    );
+      );
   }
 }

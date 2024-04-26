@@ -7,7 +7,7 @@ class NetworkImageContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 250.0,
-      width: 350.0,
+      //width: 350.0,
       alignment: Alignment.bottomCenter,
       decoration: BoxDecoration(
         border: Border.all(

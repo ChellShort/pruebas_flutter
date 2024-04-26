@@ -10,7 +10,7 @@ class CustomRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: double.infinity,
+      //height: double.infinity,
       child: Row(
         
         crossAxisAlignment: CrossAxisAlignment.end,
@@ -18,15 +18,22 @@ class CustomRow extends StatelessWidget {
           Expanded(
             child: Container(
               
-              height: 50.0,
+              height: 150.0,
               color: Colors.red,
             ),
           ),
           Expanded(
             child: Container(
               
-              height: 50.0,
+              height: 150.0,
               color: Colors.blue
+            ),
+          ),
+          Expanded(
+            child: Container(
+              
+              height: 150.0,
+              color: Colors.black
             ),
           ),
         ],
