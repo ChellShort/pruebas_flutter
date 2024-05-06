@@ -7,7 +7,8 @@ class BoxList{
       {'name': 'Amigos', 'image': 'https://pbs.twimg.com/media/GG39xyub0AA9HHY?format=jpg&name=small'},
       {'name': 'Convención', 'image': 'https://pbs.twimg.com/media/GGPWTU2aYAAMhcx?format=jpg&name=small'},
       {'name': 'Foto', 'image': 'https://pbs.twimg.com/media/GFVyXPwbgAA8KKJ?format=jpg&name=small'},
-      {'name': 'Wikipedia', 'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Wikipe-tan_full_length.svg/1200px-Wikipe-tan_full_length.svg.png'}
+      {'name': 'Wikipedia', 'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Wikipe-tan_full_length.svg/1200px-Wikipe-tan_full_length.svg.png'},
+      {'name': 'Taza', 'image': 'https://colormake.com/wp-content/uploads/2013/03/taza-6-Oz.png'}
     ];
 }
 
