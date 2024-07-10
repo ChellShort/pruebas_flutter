@@ -12,13 +12,24 @@ class Categories extends StatelessWidget {
           future: ApiServices().productsCategories(),
           builder: (context, snap) {
             if (snap.hasData) {
-              final catList = snap.data as List;
+              final List<dynamic> catList = snap.data as List<dynamic>;
               return ListView.builder(
                   padding: const EdgeInsets.symmetric(horizontal: 5.0),
                   itemCount: catList.length,
                   scrollDirection: Axis.horizontal,
                   physics: const BouncingScrollPhysics(),
                   itemBuilder: (context, i) {
+                    // Si los elementos son mapas, obtén el nombre del mapa
+                    final category = catList[i];
+                    String categoryName;
+                    if (category is Map<String, dynamic>) {
+                      categoryName = category['name'] ?? 'Unknown';
+                    } else if (category is String) {
+                      categoryName = category;
+                    } else {
+                      categoryName = 'Unknown';
+                    }
+
                     return Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 3.0),
                       child: Container(
@@ -29,7 +40,7 @@ class Categories extends StatelessWidget {
                         ),
                         alignment: Alignment.bottomCenter / 1.2,
                         child: Text(
-                          catList[i],
+                          categoryName,
                           style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -38,6 +49,10 @@ class Categories extends StatelessWidget {
                       ),
                     );
                   });
+            } else if (snap.hasError) {
+              return Center(
+                child: Text('Error: ${snap.error}'),
+              );
             } else {
               return const Center(
                 child: CircularProgressIndicator(),
